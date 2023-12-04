@@ -16,6 +16,12 @@
             </div>
 
             <div class="form-group">
+                <label asp-for="Livro.Autor" class="control-label"></label>
+                <input asp-for="Livro.Autor" class="form-control" />
+                <span asp-validation-for="Livro.Autor" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
                 <label asp-for="Livro.ImagemUri" class="control-label"></label>
                 <input asp-for="Livro.ImagemUri" class="form-control" />
                 <span asp-validation-for="Livro.ImagemUri" class="text-danger"></span>
