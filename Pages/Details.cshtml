@@ -13,8 +13,9 @@
 
     <div class="col-6">
         <h4 class="my-3">Sobre:</h4>
-        <h4 class="my-3">Mais Info:</h4>
         <ul>
+            <li><label asp-for="Livro.Nome"></label>: @Html.DisplayFor(model => model.Livro.Nome)</li>
+            <li><label asp-for="Livro.Autor"></label>: @Html.DisplayFor(model => model.Livro.Autor)</li>
             <li><label asp-for="Livro.Preco"></label>: @Html.DisplayFor(model => model.Livro.Preco)</li>
             <li><label asp-for="Livro.EntregaExpressa"></label>: @Model.Livro.EntregaExpressaFormatada</li>
             <li><label asp-for="Livro.DataCadastro"></label>: @Html.DisplayFor(model => model.Livro.DataCadastro)</li>
