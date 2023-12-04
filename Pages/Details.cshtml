@@ -1,0 +1,37 @@
+﻿@page "/livro/{slug}/{id}"
+@model BookParadise.Pages.DetailsModel
+@{
+}
+
+<h2 class="my-3">@Model.Livro.Nome</h2>
+
+<div class="row">
+
+    <div class="col-4">
+        <img class="img-fluid rounded" src="@Model.Livro.ImagemUri">
+    </div>
+
+    <div class="col-6">
+        <h4 class="my-3">Sobre:</h4>
+        <h4 class="my-3">Mais Info:</h4>
+        <ul>
+            <li><label asp-for="Livro.Preco"></label>: @Html.DisplayFor(model => model.Livro.Preco)</li>
+            <li><label asp-for="Livro.EntregaExpressa"></label>: @Model.Livro.EntregaExpressaFormatada</li>
+            <li><label asp-for="Livro.DataCadastro"></label>: @Html.DisplayFor(model => model.Livro.DataCadastro)</li>
+            @if (Model.Produtora is not null)
+            {
+                <li><label asp-for="Livro.ProdutoraId"></label>: @Html.DisplayFor(model => model.Produtora.Descricao)</li>
+            }
+            @if (Model.Livro.Categorias.Count > 0)
+            {
+                <li>
+                    <label asp-for="Livro.Categorias"></label>:
+                    @string.Join(", ", Model.Livro.Categorias.Select(item => item.Descricao))
+                </li>
+            }
+        </ul>
+        <a class="btn my-3 btn-primary"
+           asp-page="Edit" asp-route-id="@Model.Livro.LivroId">Editar</a>
+    </div>
+
+</div>
