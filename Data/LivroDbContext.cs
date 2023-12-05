@@ -1,9 +1,10 @@
 ﻿using BookParadise.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookParadise.Data
 {
-    public class LivroDbContext : DbContext
+    public class LivroDbContext : IdentityDbContext
     {
         public DbSet<Livro> Livro { get; set; }
         public DbSet<Produtora> Produtora { get; set; }
