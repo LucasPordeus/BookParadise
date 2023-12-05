@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookParadise.Data.Migrations
 {
     [DbContext(typeof(LivroDbContext))]
-    [Migration("20231204211900_CargaInicialProdutora")]
-    partial class CargaInicialProdutora
+    [Migration("20231205004823_CriacaoTabelaLivro")]
+    partial class CriacaoTabelaLivro
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
