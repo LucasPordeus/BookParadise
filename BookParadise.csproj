@@ -7,6 +7,14 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Pages\Shared\About.cshtml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="Pages\Shared\About.cshtml" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.14" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.14" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.14" />
